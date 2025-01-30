@@ -12,18 +12,18 @@ Results indicate that DtoM achieves near-perfect accuracy (>99%) in morphologica
 
 Despite these advancements, challenges persist in model interpretability, domain-specific biases, and computational costs associated with scaling LLM-driven taxonomy. This study provides a foundation for AI-powered taxonomy, demonstrating the feasibility of LLMs in automating taxonomic tasks while maintaining high accuracy. The findings suggest that integrating AI with expert-driven workflows can significantly accelerate biodiversity research, facilitate large-scale taxonomic data standardization, and support conservation efforts.
 
-**Keywords:** Taxonomy, Large Language Models, Generative AI, Knowledge Graphs, Retrieval-Augmented Generation, Species Classification, TaxonGPT, DtoM, AI Taxonomic Workflows
-
-## Overview
-> ### Chapter Brief:
-*  Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text.
--  Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text.
-*  Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text.
+**Keywords: Taxonomy, Large Language Models, Generative AI, Knowledge Graphs, Retrieval-Augmented Generation, Species Classification, TaxonGPT, DtoM, AI Taxonomic Workflows**
 
 > ### Outline:
 *  Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text.
 -  Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text.
 *  Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text.
+
+## Overview
+> ### Chapter Brief:
+*  **Chapter 2: Pre-Experimental Testing.** This chapter explores the initial application of LLMs in taxonomy through two core tasks: processing taxonomic descriptions and species classification. To address AI hallucinations, we employed prompt engineering and structured semantic approaches, such as knowledge graphs, to enhance reliability. The chapter details prompt design strategies and discusses the integration of knowledge graphs to improve taxonomic research.
+-  **Chapter 3: DtoM: Taxonomic Natural Language Processing.** Building on preliminary findings, this chapter explores the application of LLMs to specific taxonomic tasks through three simulation processes: (1) Character List-Based Taxonomic Matrix Extraction and Comparative Analysis, (2) Taxonomic Matrix Extraction and Accuracy Assessment, and (3) Comparative Analysis of Taxonomic Matrix Extraction Using Descriptive Content. To further investigate NLP challenges in taxonomy, we developed the DtoM (Description to Matrix) workflow within a Python environment, integrating an LLM API to convert taxonomic descriptions into structured morphological matrices. The workflow was tested using accurate taxonomic data, and its output was evaluated for quality and accuracy, assessing the performance of DtoM in taxonomic NLP.
+*  **Chapter 4: TaxonGPT: Taxonomic Classification Using Generative Artificial Intelligence.** This chapter expands on the potential of LLMs in taxonomic research, addressing AI hallucinations and evaluating their performance in NLP tasks. We assess the feasibility of applying LLMs to taxonomy by exploring whether they can generate meaningful taxonomic descriptions from morphological matrices, classify species, and construct taxonomic keys. To achieve this, we developed TaxonGPT, a Python-based program integrating an LLM API for taxonomic data processing. To enhance accuracy and reliability, we incorporated recursive validation loops utilizing LLMs’ self-checking capabilities. The generated taxonomic descriptions and keys were rigorously evaluated using accurate taxonomic data and compared against existing taxonomic software. Evaluation criteria included output quality (using the E<sub>Dicho</sub> metric), classification accuracy, and additional factors such as efficiency, cost-effectiveness, execution time, and reproducibility.
 
 ## Timeline
 This timeline provides a comprehensive overview of the research phases undertaken throughout 2024, detailing the various experimental procedures, iterations, and technological advancements at each stage. The project focuses on applying Generative Artificial Intelligence (AI) to taxonomy, aiming to enhance taxonomic classification and morphological matrix processing through AI-driven methodologies. The research is systematically divided into three primary phases, each addressing distinct technical challenges and refining AI-assisted taxonomic processes.
