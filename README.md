@@ -14,16 +14,109 @@ Despite these advancements, challenges persist in model interpretability, domain
 
 **Keywords: Taxonomy, Large Language Models, Generative AI, Knowledge Graphs, Retrieval-Augmented Generation, Species Classification, TaxonGPT, DtoM, AI Taxonomic Workflows**
 
-> ### Outline:
-*  Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text.
--  Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text.
-*  Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text.
+## Outline:
+All experimental tests and simulations were conducted using the Python programming language within the PyCharm integrated development environment (IDE) and web-based LLM platforms. The execution process involved multiple software tools and programming languages, including Python, Linux, and R (for scripting), as well as command-line interfaces for executing scripts.
+> ### Software and Tools Used
+> The primary software used includes:
+*  **Large Language Models (LLMs)**: Selected LLMs for taxonomic tasks
+*  **PAUP**: Software for phylogenetic analysis
+*  **Mesquite**: Taxonomic software for evolutionary biology
+*  **DELTA**: A descriptive language tool for taxonomic data
 
-## Overview
-> ### Chapter Brief:
-*  **Chapter 2: Pre-Experimental Testing.** This chapter explores the initial application of LLMs in taxonomy through two core tasks: processing taxonomic descriptions and species classification. To address AI hallucinations, we employed prompt engineering and structured semantic approaches, such as knowledge graphs, to enhance reliability. The chapter details prompt design strategies and discusses the integration of knowledge graphs to improve taxonomic research.
--  **Chapter 3: DtoM: Taxonomic Natural Language Processing.** Building on preliminary findings, this chapter explores the application of LLMs to specific taxonomic tasks through three simulation processes: (1) Character List-Based Taxonomic Matrix Extraction and Comparative Analysis, (2) Taxonomic Matrix Extraction and Accuracy Assessment, and (3) Comparative Analysis of Taxonomic Matrix Extraction Using Descriptive Content. To further investigate NLP challenges in taxonomy, we developed the DtoM (Description to Matrix) workflow within a Python environment, integrating an LLM API to convert taxonomic descriptions into structured morphological matrices. The workflow was tested using accurate taxonomic data, and its output was evaluated for quality and accuracy, assessing the performance of DtoM in taxonomic NLP.
-*  **Chapter 4: TaxonGPT: Taxonomic Classification Using Generative Artificial Intelligence.** This chapter expands on the potential of LLMs in taxonomic research, addressing AI hallucinations and evaluating their performance in NLP tasks. We assess the feasibility of applying LLMs to taxonomy by exploring whether they can generate meaningful taxonomic descriptions from morphological matrices, classify species, and construct taxonomic keys. To achieve this, we developed TaxonGPT, a Python-based program integrating an LLM API for taxonomic data processing. To enhance accuracy and reliability, we incorporated recursive validation loops utilizing LLMs’ self-checking capabilities. The generated taxonomic descriptions and keys were rigorously evaluated using accurate taxonomic data and compared against existing taxonomic software. Evaluation criteria included output quality (using the E<sub>Dicho</sub> metric), classification accuracy, and additional factors such as efficiency, cost-effectiveness, execution time, and reproducibility.
+> ### Code Organization and Figure Generation
+> Benchmarking results and visualization scripts for different pipelines are stored in the following directories:
+* **TaxonGPT**: TaxonGPT/Figure_code
+* **Simulation Test**: Simulation Test/Figure_code
+* **DtoM (Description to Matrix)**: DtoM/Figure_code
+
+For Simulation Test, DtoM (Description to Matrix), and TaxonGPT, we utilized OpenAI's ChatGPT-4o (2024/08/06) via API calls. Before running these scripts, users must configure their local environment by importing an OpenAI API key to enable model access. To set up the API key, add the following in your environment configuration:
+> ### Obtain the OpenAI API key and configure it as an environment variable
+To integrate the TaxonGPT function, the OpenAI API (Application Programming Interface) must be utilized. Connecting to the OpenAI API can invoking relevant models provided by OpenAI. Since the API key is a sensitive and confidential code, it is crucial to prevent exposing the key or submitting it through a browser.To ensure the API key is securely imported and avoid any potential risk, it is mandatory to set the API key as a system environment variable before using the TaxonGPT function.
+
+If the API key is correctly set, the TaxonGPT function will proceed with the subsequent operations. However, if the API key is not properly loaded into the environment, the TaxonGPT function will return an appropriate prompt, providing instructions to help check and resolve the issues.
+
+#### How to Correctly Obtain and Use OpenAI's API Key:
+1. Locate the "API" section at the bottom of the OpenAI interface.
+2. Log in to your user account through the API login portal and navigate to the API interface.
+3. Click on the "Dashboard" located at the top right corner.
+4. Access the "API keys" interface to manage your API keys.
+5. Create the API key and ensure to save and record this key properly for future use.
+
+
+![step1-4](https://github.com/user-attachments/assets/b17b1c8e-d233-40e4-a0dd-c8a8683bdde1)
+
+*** Once you have obtained the API code from OpenAI, the first step is to configure the API within the environment variables. This can be done by executing the appropriate configuration commands in PowerShell. After successfully configuring the API in the environment, it is essential to restart the terminal window to ensure that the changes take effect, and then use the relevant commands to verify the environment variables.
+```
+# For configuring environment variables (API) in PowerShell. (For Windows)
+setx OPENAI_API_KEY “YOUR_API_KEY”
+# Verifying whether the environment variables (API) were successfully imported in the new PowerShell session. (For Windows)
+$env:OPENAI_API_KEY
+
+# For configuring environment variables (API) in PowerShell. (For Linux/macOS)
+export OPENAI_API_KEY="sk-your-api-key"
+# Verifying whether the environment variables (API) were successfully imported in the new PowerShell session. (For Linux/macOS)
+echo $OPENAI_API_KEY
+```
+#### ⚠️Caution: Refrain from disclosing your API key to unauthorized individuals or posting it in publicly accessible locations.
+
+## Installation and Usage
+> ### Simulation Test
+To run each simulation, the three simulation processes are located in the Simulation Test folder. Before executing the simulation scripts, ensure that the required Python packages, including json, OpenAI, os, random, typing, and re, are installed in your environment. For further inspection or modification of the prompts used in model invocation within the pipeline, open the corresponding Python script using a compatible Python IDE such as PyCharm or VS Code to ensure proper execution and editing.
+> ### DtoM (Description to Matrix)
+The code for the DtoM (Description to Matrix) module is stored in the DtoM (Description to Matrix) folder. Before running the script, ensure that the required Python packages, including json, OpenAI, os, and re, are installed in your environment. To process taxonomic descriptions, replace the file_path variable in the script with the path to the TXT file containing the taxonomic description to be analyzed. 
+
+For further inspection or modification of the prompts used in model invocation within the pipeline, open the corresponding Python script using a compatible Python IDE such as PyCharm or VS Code to ensure proper execution and editing.
+> ### TaxonGPT
+The code for TaxonGPT is stored in the TaxonGPT folder. Before running the script, ensure that the required Python packages, including json, OpenAI, os, re, and pandas, are installed in your environment. In the config file, update the file paths to match the corresponding input data locations. Additionally, the prompts used for model invocation are stored separately in TaxonGPT/Prompt_messages.json, allowing users to review and modify them as needed.
+
+To utilize the TaxonGPT.py file effectively, a configuration file is required. This configuration file should include the necessary input file paths and the output file path. The essential information within the config file includes:
+#### Input file
+TaxonGPT is dedicated to converting information from Nexus matrices into biologically meaningful taxonomic information and accurate natural language descriptions of species. To achieve comprehensive taxonomic data, the input files for TaxonGPT include:
+* **Nexus Matrix** (nexus_file_path): Contains species and their corresponding character states.
+* **Prompt Message** (prompt_file_path): Instructions for the API model. This file can be adjusted based on specific requirements.
+* **Character Information** (character_file_path): Since the matrix typically lacks detailed descriptions, character mapping is necessary to obtain taxonomically meaningful descriptions.
+
+#### Output file
+There are many types of outputs that can be generated by using TaxonGPT:
+* **Csv file** (csv_output_path): Store and output Nexus matrix information in csv format.
+* **Knowledge graph file** (prompt_file_path): The Nexus matrix information is stored and output in the knowledge graph format.
+* **Taxonomic description** (taxonomic_description_path): Output the taxonomic description corresponding to the Nexus matrix content.
+* **Taxonomic key** (taxonomic_key_path): Output the taxonomic key corresponding to the Nexus matrix content.
+  
+To utilize the TaxonGPT.py file effectively, a configuration file is required. This configuration file should include the necessary input file paths and the output file path. The essential information within the config file includes:
+* **API Key**: Your OpenAI API key.
+* **Paths**: A dictionary containing the paths to the input and output files.
+```python
+{
+    "api_key": "YOUR API KEY HERE",
+    "nexus_file_path": "<Full path to the input Nexus file>",
+    "prompt_file_path": "<Full path to the input Prompt file>",
+    "character_file_path": "<Full path to the input character info file>",
+    
+    "csv_output_path": "<Full path to  output CSV format matrix file>",
+    "json_output_path": "<Full path to output JSON format matrix file>",
+    "taxonomic_description_path": "<Full path to output taxonomic description file>"
+    "taxonomic_key_path": "<Full path to output taxonomic key file>"
+
+    
+    "comparison_output_path": "<Full path to output taxonomic key file>",
+    # By default, the description check feature is disabled to prevent generating excessive redundant results. If you need to check the execution steps, please set "enable_description_check": false to true in the configuration file.
+    "enable_description_check": false
+
+}
+```
+TaxonGPT consists of two main functionalities: DESCRIBE and KEY. Users can select and execute these functions within the Python script by specifying the desired task:
+```python
+# Through TaxonGPT() to generate the related result
+TaxonGPT = TaxonGPT(config_file_path)
+
+# Generate the Taxonomic Key
+TaxonGPT.process_key()
+
+# Generate the Taxonomic Description
+TaxonGPT.process_description()
+```
+These functions can be executed through the TaxonGPT instance, ensuring proper data processing and taxonomic classification.
 
 ## Timeline
 This timeline provides a comprehensive overview of the research phases undertaken throughout 2024, detailing the various experimental procedures, iterations, and technological advancements at each stage. The project focuses on applying Generative Artificial Intelligence (AI) to taxonomy, aiming to enhance taxonomic classification and morphological matrix processing through AI-driven methodologies. The research is systematically divided into three primary phases, each addressing distinct technical challenges and refining AI-assisted taxonomic processes.
