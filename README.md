@@ -30,7 +30,7 @@ All experimental tests and simulations were conducted using the Python programmi
 * **DtoM (Description to Matrix)**: DtoM/Figure_code
 
 For Simulation Test, DtoM (Description to Matrix), and TaxonGPT, we utilized OpenAI's ChatGPT-4o (2024/08/06) via API calls. Before running these scripts, users must configure their local environment by importing an OpenAI API key to enable model access. To set up the API key, add the following in your environment configuration:
-> ### Obtain the OpenAI API key and configure it as an environment variable
+> ### Obtain OpenAI API key and set as environment variable
 To integrate the TaxonGPT function, the OpenAI API (Application Programming Interface) must be utilized. Connecting to the OpenAI API can invoking relevant models provided by OpenAI. Since the API key is a sensitive and confidential code, it is crucial to prevent exposing the key or submitting it through a browser.To ensure the API key is securely imported and avoid any potential risk, it is mandatory to set the API key as a system environment variable before using the TaxonGPT function.
 
 If the API key is correctly set, the TaxonGPT function will proceed with the subsequent operations. However, if the API key is not properly loaded into the environment, the TaxonGPT function will return an appropriate prompt, providing instructions to help check and resolve the issues.
@@ -64,7 +64,10 @@ echo $OPENAI_API_KEY
 To run each simulation, the three simulation processes are located in the Simulation Test folder. Before executing the simulation scripts, ensure that the required Python packages, including json, OpenAI, os, random, typing, and re, are installed in your environment. For further inspection or modification of the prompts used in model invocation within the pipeline, open the corresponding Python script using a compatible Python IDE such as PyCharm or VS Code to ensure proper execution and editing.
 > ### DtoM (Description to Matrix)
 The code for the DtoM (Description to Matrix) module is stored in the DtoM (Description to Matrix) folder. Before running the script, ensure that the required Python packages, including json, OpenAI, os, and re, are installed in your environment. To process taxonomic descriptions, replace the file_path variable in the script with the path to the TXT file containing the taxonomic description to be analyzed. 
-
+```python
+# Define the path to the file containing species descriptions
+file_path = "species_descriptions.txt"
+```
 For further inspection or modification of the prompts used in model invocation within the pipeline, open the corresponding Python script using a compatible Python IDE such as PyCharm or VS Code to ensure proper execution and editing.
 > ### TaxonGPT
 The code for TaxonGPT is stored in the TaxonGPT folder. Before running the script, ensure that the required Python packages, including json, OpenAI, os, re, and pandas, are installed in your environment. In the config file, update the file paths to match the corresponding input data locations. Additionally, the prompts used for model invocation are stored separately in TaxonGPT/Prompt_messages.json, allowing users to review and modify them as needed.
@@ -130,7 +133,130 @@ This timeline provides a comprehensive overview of the research phases undertake
 
 
 ## Results Eaxample
-Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text.
+> ### DtoM (Description to Matrix)
+> > **NEXUS Matrix**: The NEXUS matrix generated using the DtoM (Description to Matrix) pipeline is from the Ephemeroptera dataset extracted from the DELTA database. This dataset includes 6 species with 28 morphological characters, using Taxonomic description as input.
+```markdown
+#NEXUS
+BEGIN DATA;
+DIMENSIONS NTAX=5 NCHAR=10;
+
+[! This is an automatically generated NEXUS matrix for phylogenetic analysis.]
+FORMAT MISSING=? GAP=- SYMBOLS="1234";
+
+CHARLABELS
+[1] 'Compound eyes shape and structure'
+[2] 'Fore-wing vein R5 and R4 connection'
+[3] 'Presence of hind-wings'
+[4] 'Hind-wing length relative to fore-wing in females'
+[5] 'Hind-wing costa structure'
+[6] 'Number of moveable segments in hind tarsi'
+[7] 'Number of tails on the abdomen'
+[8] 'Position of gills in nymphs'
+[9] 'Fringing of gills with filaments'
+[10] 'Fore-leg insertion under the thorax'
+;
+
+STATELABELS
+1 'Contiguous (males), rounded (females)' 'Two-lobed (males), rounded (females)' 'Rounded',
+2 'Joined basally' 'Detached basally',
+3 'Present' 'Absent',
+4 'More than one fifth the length' 'No more than one fifth the length',
+5 'Smoothly curved' 'With a conspicuous projection',
+6 '4 segments' '2-3 segments',
+7 'Two tails' 'Three tails',
+8 'Mostly at the sides of the abdomen' 'Mostly on the upper surface of the abdomen',
+9 'Not fringed with filaments on both sides' 'Never comprising a plate bearing a tuft of filaments',
+10 'Widely separated' 'Relatively close together';
+
+MATRIX
+'Baetis Leach'
+2 2 1 2 (1 2) 1 1 1 (1 2) -
+'Brachycercus Curtis'
+3 1 2 2 - 1 2 2 1 1
+'Caenis Stephens'
+3 1 2 - - 1 2 2 1 2
+'Centroptilum Eaton'
+2 2 1 2 2 1 1 1 1 -
+'Cloeon Leach'
+3 2 2 1 - 1 1 1 1 -
+;
+END;
+```
+> ### TaxonGPT
+> **Taxonomic Key**: The taxonomic key results generated using the TaxonGPT.Key function are derived from the Equisetum dataset extracted from the DELTA database. This dataset includes 12 species characterized by 29 morphological traits, stored in the form of a Nexus matrix.
+```markdown
+1.
+    -  The rhizomes <whether tuberous>: Bearing tubers ........ 2
+    -  The rhizomes <whether tuberous>: Bearing tubers//Not tuberous ........ 3
+    -  The rhizomes <whether tuberous>: Not tuberous ........ 4
+2(1).
+    -  The longitudinal internodal grooves <in the main stem internodes of the assimilating shoots, details>: Fine, the ribs between them not prominent ........ 5
+    -  The longitudinal internodal grooves <in the main stem internodes of the assimilating shoots, details>: Deep, with prominent ridges between ........ Equisetum palustre
+3(1).
+    -  The shoots <dimorphism>: Conspicuously dimorphic ........ 7
+    -  The shoots <dimorphism>: Distinguishable as fertile and sterile ........ Equisetum sylvaticum
+    -  The shoots <dimorphism>: All green and alike vegetatively, the sterile and cone-bearing shoots emerging at the same time ........ Equisetum fluviatile
+4(1).
+    -  The main stems <of the assimilating shoots, persistence>: Persisting through the winter ........ 8
+    -  The main stems <of the assimilating shoots, persistence>: Dying down in autumn ........ 9
+5(2).
+    -  Endodermis <in main stem internodes of assimilating shoots, location>: Surrounding the individual vascular bundles ........ 6
+    -  Endodermis <in main stem internodes of assimilating shoots, location>: Comprising a single layer outside the ring of vascular bundles ........ Equisetum palustre
+6(5).
+    -  The main stems <of the assimilating shoots, carriage>: Erect ........ Equisetum litorale
+    -  The main stems <of the assimilating shoots, carriage>: Erect//Decumbent ........ Equisetum palustre
+7(3).
+    -  The brown, non-assimilating fertile stems <number of sheaths>: With numerous sheaths and relatively short internodes ........ Equisetum telmateia
+    -  The brown, non-assimilating fertile stems <number of sheaths>: With only 4 to 6 relatively distant sheaths ........ Equisetum arvense
+8(4).
+    -  The main stems <of the assimilating shoots, branching>: Bearing whorls of slender branches at the nodes ........ Equisetum ramosissimum
+    -  The main stems <of the assimilating shoots, branching>: Sparingly branched, the branches solitary and similar to the main stem//Simple ........ 10
+    -  The main stems <of the assimilating shoots, branching>: Simple ........ Equisetum hyemale
+9(4).
+    -  The shoots <dimorphism>: Distinguishable as fertile and sterile ........ Equisetum pratense
+    -  The shoots <dimorphism>: All green and alike vegetatively, the sterile and cone-bearing shoots emerging at the same time ........ Equisetum moorei
+10(8).
+    -  The main stems <of the assimilating shoots, rough or smooth>: Very rough ........ Equisetum trachyodon
+    -  The main stems <of the assimilating shoots, rough or smooth>: Slightly rough ........ Equisetum variegatum
+```
+> **Taxonomic Description**: The dataset results generated using the TaxonGPT. Description function include detailed information for one of the species, *Equisetum arvense*. This data is derived from the *Equisetum* dataset extracted from the DELTA database, which comprises 12 species characterized by 29 morphological characters, stored in the form of a Nexus matrix.
+```
+Taxonomic Description for *Equisetum arvense*
+Equisetum_arvense: 
+	List Form:
+	1. **The rhizomes**: Bearing tubers and Not tuberous
+	2. **The shoots**: Conspicuously dimorphic
+	3. **The brown, non-assimilating fertile stems**: With only 4 to 6 relatively distant sheaths
+	4. **The main stems (of the assimilating shoots, carriage)**: Erect and Decumbent
+	5. **The main stems (of the assimilating shoots, colour)**: Bright green
+	6. **The main stems (of the assimilating shoots, rough or smooth)**: Slightly rough
+	7. **The main stems (of the assimilating shoots, branching)**: Bearing whorls of slender branches at the nodes
+	8. **The main stems (of the assimilating shoots, persistence)**: Dying down in autumn
+	9. **The main stem internodes (of the assimilating shoots, whether swollen)**: Missing
+	10. **The longitudinal internodal grooves (in the main stem internodes of the assimilating shoots, details)**: Deep,with prominent ridges between
+	11. **The main stem internodes (of the assimilating shoots, presence of a central hollow)**: With a central hollow
+	12. **Central hollow (of the main stem internodes of assimilating shoots, relative diameter)**: Much less than half the diameter of the internode and About half the diameter of the internode
+	13. **Endodermis (in main stem internodes of assimilating shoots, location)**: Comprising a single layer outside the ring of vascular bundles
+	14. **The main stem sheaths (of assimilating shoots, length relative to breadth)**: About as broad as long
+	15. **The main stem sheaths (of assimilating shoots, loose or appressed)**: Missing
+	16. **The teeth (of the main stem sheaths of assimilating shoots, ribbing)**: Ribbed
+	17. **The teeth (of the main stem sheaths of assimilating shoots, persistence)**: Missing
+	18. **The primary branching (regularity)**: Symmetrical
+	19. **The primary branches (when present, few or many)**: Numerous
+	20. **The primary branches (carriage)**: Spreading and Drooping
+	21. **The primary branches (of assimilating shoots, whether themselves branched)**: Simple
+	22. **The first (primary) branch internodes (of assimilating shoots, relative length)**: At least as long as the subtending sheaths, at least on the upper parts of the stem
+	23. **The primary branch internodes**: Solid
+	24. **Stomata (of assimilating shoots, insertion relative to the adjacent epidermal cells)**: Not sunken
+	25. **The cones (blunt or apiculate)**: Blunt
+	26. **Spores (whether fertile)**: Fertile
+	27. **Spores released (months released)**: April
+	28. **Subgenus**: Equisetum
+	29. **Section (of subgenus Equisetum)**: Vernalia
+	
+	Paragraph Form:
+	Equisetum arvense is characterized by rhizomes that are both bearing tubers and not tuberous (1). The shoots are conspicuously dimorphic (2). The brown, non-assimilating fertile stems have only 4 to 6 relatively distant sheaths (3). The main stems of the assimilating shoots are both erect and decumbent (4), and they are bright green in color (5). These stems are slightly rough (6) and bear whorls of slender branches at the nodes (7). The main stems die down in autumn (8). The longitudinal internodal grooves in the main stem internodes of the assimilating shoots are deep, with prominent ridges between (10). The main stem internodes have a central hollow (11), which is much less than half the diameter of the internode and about half the diameter of the internode (12). The endodermis in the main stem internodes of the assimilating shoots comprises a single layer outside the ring of vascular bundles (13). The main stem sheaths of the assimilating shoots are about as broad as long (14). The teeth of the main stem sheaths of the assimilating shoots are ribbed (16). The primary branching is symmetrical (18), and the primary branches are numerous (19). These branches are both spreading and drooping (20). The primary branches of the assimilating shoots are simple (21), and the first primary branch internodes are at least as long as the subtending sheaths, at least on the upper parts of the stem (22). The primary branch internodes are solid (23). The stomata of the assimilating shoots are not sunken relative to the adjacent epidermal cells (24). The cones are blunt (25). The spores are fertile (26) and are released in April (27). This species belongs to the subgenus Equisetum (28) and the section Vernalia (29).
+```
 
 ## Acknowledgements
 Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text.
