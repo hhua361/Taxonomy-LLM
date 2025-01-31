@@ -15,7 +15,8 @@ Despite these advancements, challenges persist in model interpretability, domain
 **Keywords: Taxonomy, Large Language Models, Generative AI, Knowledge Graphs, Retrieval-Augmented Generation, Species Classification, TaxonGPT, DtoM, AI Taxonomic Workflows**
 
 ## Outline:
-All experimental tests and simulations were conducted using the Python programming language within the PyCharm integrated development environment (IDE) and web-based LLM platforms. The execution process involved multiple software tools and programming languages, including Python, Linux, and R (for scripting), as well as command-line interfaces for executing scripts.
+All experimental tests and simulations were conducted using the Python programming language within the PyCharm integrated development environment (IDE) and web-based LLM platforms. The execution process involved multiple software tools and programming languages, including Python, Linux, and R (for scripting), as well as command-line interfaces for executing scripts. **Please refer to the [Wiki](https://github.com/hhua361/UoA-Thesis/wiki/Overview) for an overview of the project.** 
+
 > ### Software and Tools Used
 > The primary software used includes:
 *  **Large Language Models (LLMs)**: Selected LLMs for taxonomic tasks
