@@ -1,0 +1,75 @@
+#NEXUS
+BEGIN DATA;
+DIMENSIONS NTAX=24 NCHAR=18;
+
+[! This is an automatically generated NEXUS matrix for phylogenetic analysis.]
+FORMAT MISSING=? GAP=- SYMBOLS="12345";
+
+CHARLABELS
+[1] 'Body shape'
+[2] 'Mandibular palp proximal article setation'
+[3] 'Maxilla I outer lobe spines'
+[4] 'Maxilla I inner lobe setae count'
+[5] 'Gnathopod II propodus shape'
+[6] 'Gnathopod II propodus size'
+[7] 'Gnathopod II propodus supporting spines'
+[8] 'Gnathopod I-II dactylus setae on outer margin'
+[9] 'Dactylus of pereopods III-IV setae'
+[10] 'Dactylus of pereopods VI-VII setae'
+[11] 'Urosomite I setae at the base of uropod I'
+[12] 'Urosomite I dorsolateral setae'
+[13] 'Urosomite III dorsolateral setae'
+[14] 'Epimeral plate III shape'
+[15] 'Telson cleft depth'
+[16] 'Telson dorsal spines'
+[17] 'Pleopods I-III hooks in retinacles'
+[18] 'Peduncles of pleopods I-III setation'
+;
+
+STATELABELS
+1 'Slender (coxal plates as deep as wide or wider than deeper)' 'Stout (coxal plates more deep than wide)',
+2 'Without setae' 'With setae',
+3 'Seven spines, inner often multidenticulated, other with 1-C2 denticles' 'Seven spines, all multidenticulated' 'More than seven spines, inner often multidenticulated, other with 1-C2 denticles',
+4 '1 seta' '2 setae' '3-C4 setae' '5-C6 setae' '8 setae',
+5 'Strongly trapezoid - hoof shaped' 'Quadrate to subquadrate',
+6 'Large' 'Mid-size to small',
+7 'Single supporting spine' 'Two or more supporting spines',
+8 'Single seta' 'At least two setae',
+9 'Single robust seta at the base of nail' 'At least two robust setae in proximal part of dactylus',
+10 'Single robust seta at the base of nail' 'At least two robust setae in proximal part of dactylus',
+11 'Single robust seta' 'At least two robust setae',
+12 'Single seta, thin or robust, but neither curved nor placed on socket' 'More than one seta, robust or thin' 'Single, strong, curved robust seta on a socket',
+13 'Without setae' 'With robust setae',
+14 'Angular, but not produced' 'Distinctly subrounded, disto-posterior corner indicated with seta' 'Distinctly pointed and produced posteriorly',
+15 'Deeper than 0.5 telson cleft' 'Shallow, less than 0.5 of telson length',
+16 'No dorsal spines' 'At least one dorsal spine',
+17 'Two hooks' 'More than two hooks in at least one pleopod pair',
+18 'Retinacles alone' 'Retinacles and several setae along peduncle';
+
+MATRIX
+'Species 1' 1 1 1 2 1 1 1 2 1 1 1 2 1 1 1 1 1 1
+'Species 2' 2 1 1 2 1 1 1 2 1 2 1 1 1 1 1 1 1 1
+'Species 3' 1 1 1 2 2 2 1 2 1 1 1 1 1 2 1 1 1 1
+'Species 4' 2 1 1 2 2 2 2 2 1 1 1 1 1 3 1 1 1 1
+'Species 5' 2 1 1 1 2 2 2 2 1 1 2 2 2 1 1 1 1 1
+'Species 6' 2 2 1 5 2 2 1 2 1 1 1 1 1 1 1 2 1 2
+'Species 7' 2 1 2 2 1 1 1 2 2 2 1 2 1 3 1 1 1 1
+'Species 8' 1 1 1 1 2 2 1 1 1 1 1 1 1 1 2 2 2 2
+'Species 9' 1 1 1 3 2 2 1 2 2 1 1 1 1 1 1 2 1 2
+'Species 10' 2 1 2 3 1 1 1 2 1 2 1 2 1 1 1 1 1 2
+'Species 11' 2 1 2 (2 2) 2 2 1 1 (1 2) (1 2) 1 (1 2) 1 1 1 2 1 1
+'Species 12' 1 1 1 2 2 2 1 2 1 1 1 1 1 (1 2) 1 1 1 1
+'Species 13' 1 1 1 1 2 2 1 2 1 1 2 (1 2) 1 1 1 1 2 2
+'Species 14' 2 1 1 2 1 1 1 2 1 2 1 2 1 1 1 1 1 1
+'Species 15' 2 1 1 2 1 1 1 2 (1 2) 2 1 1 1 1 1 1 1 2
+'Species 16' 2 1 (1 2 3) 2 1 1 1 2 1 2 1 1 1 1 1 1 1 2
+'Species 17' 1 1 1 2 2 2 1 2 2 2 - 2 1 (1 2) 1 2 1 1
+'Species 18' 2 2 1 3 2 2 1 2 1 - 1 2 1 1 1 2 1 2
+'Species 19' 2 1 1 (1 2 3 4) 1 1 1 2 1 1 2 1 1 1 1 2 1 1
+'Species 20' 2 1 2 3 2 2 2 2 1 1 1 1 1 1 1 1 1 1
+'Species 21' 1 1 1 1 2 2 1 1 1 1 1 1 1 2 1 1 2 1
+'Species 22' 1 1 1 2 2 2 1 1 1 1 1 1 1 2 1 1 2 2
+'Species 23' 1 2 1 4 2 2 1 2 1 1 - 1 1 2 1 1 1 1
+'Species 24' 2 1 1 (1 2 3 4) 1 1 1 2 2 2 1 3 1 3 1 2 1 1
+;
+END;

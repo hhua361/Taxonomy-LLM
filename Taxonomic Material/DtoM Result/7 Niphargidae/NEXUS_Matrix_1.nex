@@ -1,0 +1,69 @@
+#NEXUS
+BEGIN DATA;
+DIMENSIONS NTAX=24 NCHAR=15;
+
+[! This is an automatically generated NEXUS matrix for phylogenetic analysis.]
+FORMAT MISSING=? GAP=- SYMBOLS="12345";
+
+CHARLABELS
+[1] 'Body shape'
+[2] 'Mandibular palp proximal article setation'
+[3] 'Maxilla I inner lobe setation'
+[4] 'Gnathopod II propodus shape'
+[5] 'Gnathopod II propodus size'
+[6] 'Gnathopod II propodus supporting spines'
+[7] 'Dactylus of pereopods III-IV setation'
+[8] 'Dactylus of pereopods VI-VII setation'
+[9] 'Urosomite I dorsolateral setation'
+[10] 'Urosomite III dorsolateral setation'
+[11] 'Epimeral plate III shape'
+[12] 'Telson cleft depth'
+[13] 'Telson dorsal spines'
+[14] 'Pleopods I-III retinacle hooks'
+[15] 'Peduncles of pleopods I-III setation'
+;
+
+STATELABELS
+1 'Slender (coxal plates as deep as wide or wider than deeper)' 'Stout (coxal plates more deep than wide)',
+2 'Without setae' 'With setae',
+3 'Single seta' '2 setae' '3-4 setae' '5-6 setae' '8 setae',
+4 'Strongly trapezoid - hoof shaped' 'Quadrate to subquadrate',
+5 'Large' 'Mid-size to small',
+6 'Single supporting spine' 'Two or more supporting spines',
+7 'Single robust seta at the base of nail' 'At least two robust setae in proximal part of dactylus',
+8 'Single robust seta at the base of nail' 'At least two robust setae in proximal part of dactylus',
+9 'Single seta, thin or robust, but neither curved nor placed on socket' 'More than one seta, robust or thin' 'Single, strong, curved robust seta on a socket',
+10 'Without setae' 'With robust setae',
+11 'Angular, but not produced' 'Distinctly subrounded, disto-posterior corner indicated with seta' 'Distinctly pointed and produced posteriorly',
+12 'Deeper than 0.5 telson cleft' 'Shallow, less than 0.5 of telson length',
+13 'No dorsal spines' 'At least one dorsal spine',
+14 'Two hooks in retinacles' 'More than two hooks in retinacles at least in one pleopod pair',
+15 'Retinacles alone' 'Retinacles and several setae along peduncle';
+
+MATRIX
+'Species 1' 1 1 2 1 1 1 1 1 2 1 1 1 1 1 1
+'Species 2' 2 1 2 1 1 1 1 2 1 1 1 1 1 1 1
+'Species 3' 1 1 2 2 2 1 1 1 1 1 2 1 1 1 1
+'Species 4' 2 1 2 2 2 2 1 1 1 1 3 1 1 1 1
+'Species 5' 2 1 1 2 2 2 1 1 2 2 1 1 1 1 1
+'Species 6' 2 2 5 2 2 1 1 1 1 1 1 1 2 1 2
+'Species 7' 2 1 2 1 1 1 2 2 2 1 3 1 1 1 1
+'Species 8' 1 1 1 2 2 1 1 1 1 1 1 2 (1 2) 2 2
+'Species 9' 1 1 3 2 2 1 2 1 1 1 1 1 2 1 2
+'Species 10' 2 1 3 1 1 1 1 2 2 1 1 1 1 1 2
+'Species 11' 2 1 2 2 2 1 (1 2) (1 2) (1 2) 1 1 1 2 1 1
+'Species 12' 1 1 2 2 2 1 1 1 1 1 (1 2) 1 1 1 1
+'Species 13' 1 1 1 2 2 1 1 1 (1 2) 1 1 1 1 2 2
+'Species 14' 2 1 2 1 1 1 1 2 2 1 1 1 1 1 1
+'Species 15' 2 1 2 1 1 1 (1 2) 2 1 1 1 1 1 1 2
+'Species 16' 2 1 (3 4) 1 1 1 1 2 (1 2) 1 1 1 1 1 2
+'Species 17' 1 1 2 2 2 1 2 2 2 1 (1 2) 1 2 1 1
+'Species 18' 2 2 3 2 2 1 1 - 2 1 1 1 2 1 2
+'Species 19' 2 1 (1 2 3 4) 1 1 1 1 1 1 1 1 1 2 1 1
+'Species 20' 2 1 3 2 2 2 1 1 1 1 1 1 1 1 1
+'Species 21' 1 1 1 2 2 1 1 1 1 1 2 1 1 2 1
+'Species 22' 1 1 2 2 2 1 1 1 1 1 2 1 1 2 2
+'Species 23' 1 2 4 2 2 1 1 1 1 1 2 1 1 1 1
+'Species 24' 2 1 (1 2 3 4) 1 1 1 2 2 3 1 3 1 2 1 1
+;
+END;

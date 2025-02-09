@@ -1,0 +1,57 @@
+#NEXUS
+BEGIN DATA;
+DIMENSIONS NTAX=12 NCHAR=15;
+
+[! This is an automatically generated NEXUS matrix for phylogenetic analysis.]
+FORMAT MISSING=? GAP=- SYMBOLS="1234";
+
+CHARLABELS
+[1] 'Leaf type'
+[2] 'Leaf arrangement'
+[3] 'Resin presence in leaves'
+[4] 'Reproductive organization'
+[5] 'Ovule position'
+[6] 'Seed wing presence'
+[7] 'Cotyledon number'
+[8] 'Wood growth rings'
+[9] 'Heartwood presence'
+[10] 'Pollination mechanism'
+[11] 'Pollen air bladders'
+[12] 'Tracheid pit type'
+[13] 'Ray tracheids presence'
+[14] 'Axial parenchyma presence'
+[15] 'Seed fleshy investment'
+;
+
+STATELABELS
+1 'Broad and flat' 'Linear' 'Scale-like' 'Pinnate',
+2 'Alternate' 'Opposite and decussate' 'Whorled',
+3 'Present' 'Absent',
+4 'Monoecious' 'Dioecious',
+5 'In cones' 'Not in cones',
+6 'Winged' 'Wingless',
+7 '2' '3 or more',
+8 'Distinct' 'Indistinct',
+9 'Present and distinctively coloured' 'Present but not distinctively coloured' 'Absent',
+10 'Anemophilous' 'Entomophilous',
+11 'Present' 'Absent',
+12 'Alternate bordered pits' 'Opposite and multiseriate bordered pits' 'Neither alternate nor opposite bordered pits',
+13 'Present' 'Absent',
+14 'Present' 'Absent',
+15 'Present' 'Absent';
+
+MATRIX
+'Species 1' (1 2) 1 1 (1 2) 1 1 1 2 (1 2 3) 1 2 1 2 2 -
+'Species 2' 2 1 1 2 1 2 1 2 (2 3) 1 2 3 2 1 1
+'Species 3' (2 3) (2 3) (1 2) (1 2) 1 (1 2) (1 2 3) (1 2) (1 2 3) 1 2 3 (1 2) 1 1
+'Species 4' 4 - 2 2 2 2 1 2 - 1 2 2 - - 1
+'Species 5' 3 (2 3) 2 2 1 2 1 1 - 1 2 - - - 2
+'Species 6' 1 1 2 2 2 2 1 1 - - 2 2 - 1 1
+'Species 7' 1 2 - (1 2) 2 2 1 - - (1 2) 2 - - - 1
+'Species 8' 2 1 (1 2) 1 1 1 2 1 (1 2 3) 1 (1 2) 3 (1 2) (1 2) -
+'Species 9' (1 2 3) (1 2) (1 2) (1 2) (1 2) 2 1 (1 2) (1 2 3) - (1 2) 3 (1 2) (1 2) 1
+'Species 10' 3 3 1 1 1 1 1 1 1 1 2 3 2 2 -
+'Species 11' 4 1 2 2 1 2 1 2 - 1 2 (2 3) - - 1
+'Species 12' 2 1 (1 2) 2 2 2 1 1 1 1 2 2 2 (1 2) 1
+;
+END;

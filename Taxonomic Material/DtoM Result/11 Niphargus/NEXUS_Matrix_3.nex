@@ -1,0 +1,64 @@
+#NEXUS
+BEGIN DATA;
+DIMENSIONS NTAX=19 NCHAR=15;
+
+[! This is an automatically generated NEXUS matrix for phylogenetic analysis.]
+FORMAT MISSING=? GAP=- SYMBOLS="123";
+
+CHARLABELS
+[1] 'Telson spine length relative to telson length'
+[2] 'Number of apical spines per telson lobe'
+[3] 'Epimeral plate III shape'
+[4] 'Urosoma segment I setae/spines'
+[5] 'Inner lobe of maxilla I setae count'
+[6] 'Outer lobe of maxilla I spine characteristics'
+[7] 'Propodus and carpus of gnathopods I - II relative size'
+[8] 'Propodus of gnathopod II relative size to gnathopod I'
+[9] 'Gnathopod dactylus setae on outer margin'
+[10] 'Coxal plate IV shape'
+[11] 'Dactyli III-IV length relative to propodus'
+[12] 'Uropod I inner ramus length relative to outer ramus'
+[13] 'Uropod I distal setae on rami'
+[14] 'Sexual dimorphism in Uropod I'
+[15] 'Sexual dimorphism in Uropod III'
+;
+
+STATELABELS
+1 'Spines long, longer than 1/2 of the telson length' 'Spines short-to mid sized, at most 0.4 telson length',
+2 '3, rarely 4 apical spines per lobe' '5 or more apical spines per lobe',
+3 'Subrounded, posterior and ventral corner always convex' 'Angular, ventral margin slightly convex, posterior margin straight or concave',
+4 'Single seta or spine dorso-postero-laterally' 'Two or more setae and/or spines dorso-postero-laterally',
+5 'One to two setae' 'Three or more setae',
+6 '7 spines, typically inner with several denticles and other with at most three denticles' 'More than 7 spines, all fine pectinated forming combs',
+7 'Carpus as long as propodus or shorter' 'Carpus longer than propodus',
+8 'Slightly larger than propodus of gnathopod I, at most of the size of head capsulae' 'Much larger than propodus of gnathopod I, larger than head capsulae',
+9 'Single seta' 'More than one seta',
+10 'More broad than deep, or as broad as deep, or slightly deeper than broad, but never with deep proximal excavation' 'Much deeper than broad, proximally with deep excavation',
+11 'Slender or stout, at most 1/2 of propodus length' 'Long and slender, longer than 1/2 of propodus length',
+12 'Shorter than outer ramus' 'Slightly to remarkably longer than outer ramus',
+13 'Not remarkably longer than spines' 'Long setae distally on rami (broom-like appearance)',
+14 'Sexually non-dimorphic' 'Sexually dimorphic: inner ramus elongated and measures 1.3�C2.0 of outer ramus in males',
+15 'Sexually non-dimorphic' 'Sexually dimorphic: distal article of expopodite in males elongated and measures 0.3�C1.0 of proximal article';
+
+MATRIX
+'Species 1' (1 2) 1 1 1 1 1 1 1 1 1 1 1 1 1 2
+'Species 2' 1 1 2 2 2 1 1 1 2 1 1 2 1 - -
+'Species 3' 2 2 2 (1 2) 2 1 1 2 2 1 1 2 1 1 2
+'Species 4' 2 1 2 1 1 2 2 1 2 2 1 2 1 1 1
+'Species 5' 1 1 2 1 1 1 1 1 2 1 2 1 1 1 2
+'Species 6' 2 1 2 1 1 1 1 1 1 1 1 2 1 1 1
+'Species 7' 1 1 2 1 (1 2) 1 1 1 2 1 2 1 1 1 2
+'Species 8' 1 1 2 (1 2) (1 2) 1 1 1 2 1 1 2 1 - 1
+'Species 9' 2 2 2 2 1 2 2 1 2 2 1 2 1 1 -
+'Species 10' (1 2) 1 2 2 2 1 1 1 2 1 1 2 1 2 2
+'Species 11' 2 1 2 (1 2) 1 1 1 1 2 1 1 2 1 2 2
+'Species 12' 1 1 1 1 1 1 1 1 2 1 1 2 2 1 (1 2)
+'Species 13' 2 1 2 1 2 1 1 2 2 1 1 2 1 1 2
+'Species 14' 1 1 2 1 1 1 1 1 2 1 1 2 1 1 2
+'Species 15' 2 1 1 1 2 1 1 1 2 1 1 2 1 2 2
+'Species 16' 2 1 2 2 1 1 1 2 2 1 1 2 1 1 2
+'Species 17' 2 (1 2) 2 2 2 1 1 2 2 2 1 2 1 2 2
+'Species 18' 2 1 2 1 - - 1 1 2 1 1 2 1 - 2
+'Species 19' 2 1 1 1 2 1 1 2 2 1 1 2 1 1 2
+;
+END;

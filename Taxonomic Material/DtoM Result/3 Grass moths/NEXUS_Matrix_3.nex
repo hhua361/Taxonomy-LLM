@@ -1,0 +1,58 @@
+#NEXUS
+BEGIN DATA;
+DIMENSIONS NTAX=15 NCHAR=14;
+
+[! This is an automatically generated NEXUS matrix for phylogenetic analysis.]
+FORMAT MISSING=? GAP=- SYMBOLS="123456";
+
+CHARLABELS
+[1] 'Presence of conical hairy prominence on face'
+[2] 'Proboscis functionality'
+[3] 'Sexual dimorphism in adults'
+[4] 'Fringe appearance'
+[5] 'Termen shape'
+[6] 'Ground colour of forewings'
+[7] 'Forewing patterning complexity'
+[8] 'Forewing patterning type'
+[9] 'Presence of median line on forewings'
+[10] 'Transverse dark lines towards termen on forewings'
+[11] 'Presence of strong white median streak on forewings'
+[12] 'Presence of conspicuous white marks at or near the apex of forewings'
+[13] 'Forewing vein 7 connection'
+[14] 'Hindwing colour'
+;
+
+STATELABELS
+1 'Present' 'Absent',
+2 'Functional' 'Atrophied',
+3 'Conspicuously sexually dimorphic' 'Not very sexually dimorphic',
+4 'Glistening-metallic' 'Not glistening-metallic' 'Conspicuously chequered' 'Somewhat chequered' 'Not chequered',
+5 'Non-sinuate' 'Sinuate' 'Somewhat sinuate',
+6 'Ochreous' 'Brown' 'Grey' 'Whitish' 'Dark fuscous' 'Ferrugineous brown',
+7 'Plain' 'Inconspicuously patterned' 'Conspicuously patterned' 'Very conspicuously patterned',
+8 'Longitudinal streaking' 'Transverse markings' 'Both longitudinal streaking and transverse markings' 'Dark dots',
+9 'Present' 'Absent',
+10 'Present' 'Absent',
+11 'Present' 'Absent',
+12 'Present' 'Absent',
+13 'Arising from vein 8' 'Free',
+14 'Pale grey' 'Dark grey' 'White' 'Whitish' 'Ochreous whitish' 'Pale fuscous' 'Dark fuscous';
+
+MATRIX
+'Species 1' (1 2) 1 (1 2) (1 2) 1 (1 2 3) (1 3) 3 (1 2) (1 2) (1 2) 2 1 (1 2)
+'Species 2' 2 1 - 2 2 1 3 3 2 1 1 2 1 1
+'Species 3' 2 2 (1 2) (2 3) 1 3 2 4 2 2 2 2 1 3
+'Species 4' 2 1 - (2 3 4 5) 1 (1 2 3) 3 3 2 (1 2) (1 2) (1 2) 1 (1 2)
+'Species 5' 1 1 1 2 (2 3) 1 (1 2) 3 2 2 2 2 2 (3 4 5)
+'Species 6' 2 1 - 1 1 4 4 3 1 2 2 2 1 (1 2)
+'Species 7' 2 1 - 1 1 (1 2) 3 3 2 1 2 2 1 (1 2 6)
+'Species 8' 2 1 - (1 2) (1 2) (1 2 4) (1 3) 3 2 (1 2) (1 2) (1 2) 1 (1 2 4)
+'Species 9' 2 2 1 2 3 (1 2) (2 3) (1 2) 2 (1 2) 2 2 - (4 5 6)
+'Species 10' 1 1 - 2 1 (1 2) (2 3) (2 3) 2 1 2 2 2 (1 4)
+'Species 11' 1 1 1 (2 4 5) 1 (1 2) 3 (2 3) 2 2 2 2 2 4
+'Species 12' 2 1 (1 2) 2 (1 2) (1 4 5) (1 3) 3 1 1 2 2 1 (1 4 6 7)
+'Species 13' 2 1 (1 2) (1 2) (1 2) 2 (1 2) 1 (1 2) 1 1 2 2 (1 2 6 7)
+'Species 14' 2 2 1 2 3 (1 2 3) 2 (1 4) 2 2 2 2 - (3 4 5)
+'Species 15' 2 1 - 1 1 6 3 3 1 1 2 2 1 (1 2)
+;
+END;
