@@ -68,8 +68,8 @@ This is just an example of the config file format that will be shown.
 """
 {
     "api_key": "YOUR API KEY HERE",
-    "input_file_path": "<Full path to the input Nexus file>",
-    "output_nexus_path": "<Full path to the input Nexus file>"
+    "input_file_path": "<Full path to the input Description file>",
+    "output_nexus_path": "<Full path to the output Nexus matrix file>"
 }
 """
 ```
