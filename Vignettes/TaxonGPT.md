@@ -10,7 +10,7 @@ To use the TaxonGPT function, you can download the TaxonGPT.py file located in t
 TaxonGPT can be installed by following this instruction on Github.\
 TaxonGPT depends on the Python package openai, please make sure it is installed as well.
 
-https://github.com/hhua361/Taxon-GPT-API.git/Taxonomy/TaxonGPT.py
+https://github.com/hhua361/UoA-Thesis/blob/main/TaxonGPT/TaxonGPT.py
  ### Steps:
 1. To use the TaxonGPT function, you can download the TaxonGPT.py file located in the main directory. Then, run it in your local Python environment.
 2. Ensure you have Python installed on your system.
