@@ -1,6 +1,0 @@
-{
-    "api_key": "YOUR API KEY HERE",
-    "input_file_path": "<Full path to the input Description file>",
-    "output_nexus_path": "<Full path to the output Nexus matrix file>"
-}
-
