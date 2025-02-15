@@ -18,8 +18,8 @@ All experimental tests and simulations were conducted using the Python programmi
 > ### Software and Tools Used
 > The primary software used includes:
 *  **Large Language Models (LLMs)**: Selected LLMs for taxonomic tasks
-*  **PAUP**: Software for phylogenetic analysis
-*  **Mesquite**: Taxonomic software for evolutionary biology
+*  **PAUP (version 4.0)**: Software for phylogenetic analysis
+*  **Mesquite (version 3.12)**: Taxonomic software for evolutionary biology
 *  **DELTA**: A descriptive language tool for taxonomic data
 
 > ### Code Organization and Figure Generation
