@@ -18,8 +18,8 @@ All experimental tests and simulations were conducted using the Python programmi
 > ### Software and Tools Used
 > The primary software used includes:
 *  **Large Language Models (LLMs)**: Selected LLMs for taxonomic tasks
-*  **PAUP**: Software for phylogenetic analysis
-*  **Mesquite**: Taxonomic software for evolutionary biology
+*  **PAUP (version 4.0)**: Software for phylogenetic analysis
+*  **Mesquite (version 3.12)**: Taxonomic software for evolutionary biology
 *  **DELTA**: A descriptive language tool for taxonomic data
 
 > ### Code Organization and Figure Generation
@@ -67,9 +67,9 @@ The code for the DtoM (Description to Matrix) module is stored in the DtoM (Desc
 # Define the path to the file containing species descriptions
 file_path = "species_descriptions.txt"
 ```
-For further inspection or modification of the prompts used in model invocation within the pipeline, open the corresponding Python script using a compatible Python IDE such as PyCharm or VS Code to ensure proper execution and editing.
+For further inspection or modification of the prompts used in model invocation within the pipeline, open the corresponding Python script using a compatible Python IDE such as PyCharm or VS Code to ensure proper execution and editing. For details, please refer to: Vignettes/DtoM.md
 > ### TaxonGPT
-The code for TaxonGPT is stored in the TaxonGPT folder. Before running the script, ensure that the required Python packages, including json, OpenAI, os, re, and pandas, are installed in your environment. In the config file, update the file paths to match the corresponding input data locations. Additionally, the prompts used for model invocation are stored separately in TaxonGPT/Prompt_messages.json, allowing users to review and modify them as needed.
+The code for TaxonGPT is stored in the TaxonGPT folder. Before running the script, ensure that the required Python packages, including json, OpenAI, os, re, and pandas, are installed in your environment. In the config file, update the file paths to match the corresponding input data locations. Additionally, the prompts used for model invocation are stored separately in TaxonGPT/Prompt_messages.json, allowing users to review and modify them as needed. For details, please refer to: Vignettes/TaxonGPT.md
 
 To utilize the TaxonGPT.py file effectively, a configuration file is required. This configuration file should include the necessary input file paths and the output file path. The essential information within the config file includes:
 #### Input file
