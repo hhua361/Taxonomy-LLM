@@ -1,7 +1,7 @@
 UoA - Master of science - Thesis
 ====
 
-# Investigating the Application of Generative Artifical Intelligence in Taxonomy
+# Investigating the Application of Generative Artificial Intelligence in Taxonomy
 
 ## Abstract
 Taxonomy plays a crucial role in biological research by offering foundational data for many scientific disciplines. However, limited resources, ecological shifts, and many undiscovered species pose a severe challenge, termed the 'Taxonomic Impediment'. This encompasses uneven taxonomic resources distribution, lack of unified data formats, difficulties balancing classify efficiency and data quality, and a heavy reliance on expert knowledge and manual labor. 
